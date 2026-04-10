@@ -107,51 +107,48 @@ const Gallery = () => {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {mediaItems.map((item) => (
-                <Card key={item.id} className="group relative overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative">
+                <div key={item.id} className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                  <div className="relative aspect-square sm:aspect-video md:aspect-square overflow-hidden">
                     {item.file_type === 'image' ? (
                       <Dialog>
                         <DialogTrigger asChild>
-                          <div className="cursor-pointer">
+                          <div className="cursor-pointer h-full w-full">
                             <img
                               src={item.file_url}
                               alt={item.file_name}
-                              className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity" />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                              <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                <Button size="sm" variant="secondary" className="bg-white/90 backdrop-blur-sm">View Image</Button>
+                              </div>
+                            </div>
                           </div>
                         </DialogTrigger>
-                        <DialogContent className="max-w-4xl">
+                        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-transparent border-none">
                           <img
                             src={item.file_url}
                             alt={item.file_name}
-                            className="w-full h-auto max-h-[80vh] object-contain"
+                            className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
                           />
                         </DialogContent>
                       </Dialog>
                     ) : (
-                      <div className="relative">
+                      <div className="relative h-full w-full">
                         <video
                           src={item.file_url}
-                          className="w-full h-48 object-cover"
+                          className="w-full h-full object-cover"
                           controls
                           preload="metadata"
                         />
-                        <div className="absolute top-2 left-2 bg-black bg-opacity-60 text-white px-2 py-1 rounded flex items-center text-sm">
+                        <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-md text-white px-2 py-1 rounded-md flex items-center text-xs font-medium">
                           <Video className="h-3 w-3 mr-1" />
                           Video
                         </div>
                       </div>
                     )}
-                    
-
                   </div>
-                  
-                  <CardContent className="p-4">
-                    <h3 className="font-medium text-gray-900 truncate">{item.file_name.replace(/\.[^/.]+$/, "")}</h3>
-                    <p className="text-sm text-gray-500 capitalize">{item.file_type}</p>
-                  </CardContent>
-                </Card>
+                </div>
               ))}
             </div>
           )}
