@@ -5,14 +5,13 @@ import { Image as ImageIcon, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Local images served directly from public/uploads/maps/
-// Sorted: larger/higher-quality images first (gallery_2,3,7 are the biggest files)
+// 6th (maps_gallery_1), 16th (maps_gallery_17), and 18th (maps_gallery_18) removed per user request
 const LOCAL_GALLERY_IMAGES = [
   { id: "2",  src: "/uploads/maps/maps_gallery_2.jpg",  alt: "WeAreYouth Foundation – Community Activity" },
   { id: "3",  src: "/uploads/maps/maps_gallery_3.jpg",  alt: "WeAreYouth Foundation – Volunteer Work" },
   { id: "7",  src: "/uploads/maps/maps_gallery_7.jpg",  alt: "WeAreYouth Foundation – Youth Program" },
   { id: "4",  src: "/uploads/maps/maps_gallery_4.jpg",  alt: "WeAreYouth Foundation – Education Initiative" },
   { id: "10", src: "/uploads/maps/maps_gallery_10.jpg", alt: "WeAreYouth Foundation – Event" },
-  { id: "1",  src: "/uploads/maps/maps_gallery_1.jpg",  alt: "WeAreYouth Foundation – Impact" },
   { id: "5",  src: "/uploads/maps/maps_gallery_5.jpg",  alt: "WeAreYouth Foundation – Community Drive" },
   { id: "6",  src: "/uploads/maps/maps_gallery_6.jpg",  alt: "WeAreYouth Foundation – Skills Training" },
   { id: "8",  src: "/uploads/maps/maps_gallery_8.jpg",  alt: "WeAreYouth Foundation – Outreach" },
@@ -22,9 +21,7 @@ const LOCAL_GALLERY_IMAGES = [
   { id: "15", src: "/uploads/maps/maps_gallery_15.jpg", alt: "WeAreYouth Foundation – Workshop" },
   { id: "16", src: "/uploads/maps/maps_gallery_16.jpg", alt: "WeAreYouth Foundation – Session" },
   { id: "13", src: "/uploads/maps/maps_gallery_13.jpg", alt: "WeAreYouth Foundation – Event" },
-  { id: "17", src: "/uploads/maps/maps_gallery_17.jpg", alt: "WeAreYouth Foundation – Campaign" },
   { id: "14", src: "/uploads/maps/maps_gallery_14.jpg", alt: "WeAreYouth Foundation – Initiative" },
-  { id: "18", src: "/uploads/maps/maps_gallery_18.jpg", alt: "WeAreYouth Foundation – Moment" },
 ];
 
 const Gallery = () => {
