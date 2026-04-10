@@ -295,7 +295,6 @@ SOFTWARE.
 ---
 
 <div align="center">
-  <strong>Built with ❤️ for WeAreYouth Foundation</strong><br/>
   <em>"Empowering Dreams, Building Futures"</em>
   <br/><br/>
   <a href="https://way-foundation.vercel.app/">🌐 Live Site</a> &nbsp;•&nbsp;
